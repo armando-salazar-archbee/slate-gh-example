@@ -1,0 +1,73 @@
+---
+title: Element API
+docTags: 
+createdAt: Wed Jun 10 2026 12:20:59 GMT+0000 (Coordinated Universal Time)
+---
+
+`Element` objects are a type of `Node` in a Slate document that contain other `Element` nodes or `Text` nodes.
+
+```typescript
+interface Element {
+  children: Node[]
+}
+```
+
+- :Link[Behavior Types]{label="Behavior Types" overridedLabel="Behavior Types" spaceId docId="ikfS9wielY-EABmjL4Jgz" version="v2" docAnchorId="#element-behavior-types" loadingMethod="dynamic" newTab="false" href="element.mdx"}
+  - :Link[Block vs. Inline]{label="Block vs. Inline" overridedLabel="Block vs. Inline" spaceId docId="ikfS9wielY-EABmjL4Jgz" version="v2" docAnchorId="#block-vs-inline" loadingMethod="dynamic" newTab="false" href="element.mdx"}
+  - :Link[Void vs Not Void]{label="Void vs Not Void" overridedLabel="Void vs Not Void" spaceId docId="ikfS9wielY-EABmjL4Jgz" version="v2" docAnchorId="#void-vs-not-void" loadingMethod="dynamic" newTab="false" href="element.mdx"}
+    - :Link[Rendering Void Elements]{label="Rendering Void Elements" overridedLabel="Rendering Void Elements" spaceId docId="ikfS9wielY-EABmjL4Jgz" version="v2" docAnchorId="#rendering-void-elements" loadingMethod="dynamic" newTab="false" href="element.mdx"}
+- :Link[Static methods]{label="Static methods" overridedLabel="Static methods" spaceId docId="ikfS9wielY-EABmjL4Jgz" version="v2" docAnchorId="#static-methods" loadingMethod="dynamic" newTab="false" href="element.mdx"}
+  - :Link[Retrieval methods]{label="Retrieval methods" overridedLabel="Retrieval methods" spaceId docId="ikfS9wielY-EABmjL4Jgz" version="v2" docAnchorId="#retrieval-methods" loadingMethod="dynamic" newTab="false" href="element.mdx"}
+  - :Link[Check methods]{label="Check methods" overridedLabel="Check methods" spaceId docId="ikfS9wielY-EABmjL4Jgz" version="v2" docAnchorId="#check-methods" loadingMethod="dynamic" newTab="false" href="element.mdx"}
+
+## Element Behavior Types
+
+Element nodes behave differently depending on the :Link[Slate editor's configuration]{label="Slate editor's configuration" overridedLabel="Slate editor's configuration" spaceId docId="HY2UgAi1FnVsaA53xavyP" version="v2" docAnchorId="#schema-specific-instance-methods-to-override" loadingMethod="dynamic" newTab="false" githubPath="./editor.md#schema-specific-instance-methods-to-override" href="editor.mdx"}. An element can be:
+
+- "block" or "inline" as defined by `editor.isInline`
+- either "void" or "not void" as defined by `editor.isVoid`
+
+### Block vs. Inline
+
+A "block" element can only be siblings with other "block" elements. An "inline" node can be siblings with `Text` nodes or other "inline" elements.
+
+### Void vs Not Void
+
+In a not "void" element, Slate handles the rendering of its `children` (e.g. in a paragraph where the `Text` and `Inline` children are rendered by Slate). In a "void" element, the `children` are rendered by the `Element`'s render code.
+
+### Rendering Void Elements
+
+Void Elements must
+
+- always have one empty child text node (for selection)
+- render using `attributes` and `children` (so, their outermost HTML element **can't** be an HTML void element)
+- set `contentEditable={false}` (for Firefox)
+
+Typical rendering code will resemble this `thematic-break` (horizontal rule) element:
+
+```javascript
+return (
+  <div {...attributes} contentEditable={false}>
+    {children}
+    <hr />
+  </div>
+)
+```
+
+## Static methods
+
+### Retrieval methods
+
+### `Element.matches(element: Element, props: Partial<Element>) => boolean`
+
+Check if an element matches a set of `props`. Note: This checks custom properties, but it does not ensure that any children are equivalent.
+
+### Check methods
+
+### `Element.isElement(value: any) => value is Element`
+
+Check if a `value` implements the `Element` interface.
+
+### `Element.isElementList(value: any) => value is Element[]`
+
+Check if a `value` is an array of `Element` objects.
