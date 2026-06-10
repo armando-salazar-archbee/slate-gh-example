@@ -1,0 +1,53 @@
+---
+title: Point API
+docTags: 
+createdAt: Wed Jun 10 2026 12:21:00 GMT+0000 (Coordinated Universal Time)
+---
+
+`Point` objects refer to a specific location in a text node in a Slate document. Its `path` refers to the location of the node in the tree, and its `offset` refers to distance into the node's string of text. Points may only refer to `Text` nodes.
+
+```typescript
+interface Point {
+  path: Path
+  offset: number
+}
+```
+
+- :Link[Static methods]{label="Static methods" overridedLabel="Static methods" spaceId docId="0Mf43DzVjfzA_1iAjmUaV" version="v2" docAnchorId="#static-methods" loadingMethod="dynamic" newTab="false" href="point.mdx"}
+  - :Link[Retrieval methods]{label="Retrieval methods" overridedLabel="Retrieval methods" spaceId docId="0Mf43DzVjfzA_1iAjmUaV" version="v2" docAnchorId="#retrieval-methods" loadingMethod="dynamic" newTab="false" href="point.mdx"}
+  - :Link[Check methods]{label="Check methods" overridedLabel="Check methods" spaceId docId="0Mf43DzVjfzA_1iAjmUaV" version="v2" docAnchorId="#check-methods" loadingMethod="dynamic" newTab="false" href="point.mdx"}
+  - :Link[Transform methods]{label="Transform methods" overridedLabel="Transform methods" spaceId docId="0Mf43DzVjfzA_1iAjmUaV" version="v2" docAnchorId="#transform-methods" loadingMethod="dynamic" newTab="false" href="point.mdx"}
+
+## Static methods
+
+### Retrieval methods
+
+### `Point.compare(point: Point, another: Point) => -1 | 0 | 1`
+
+Compare a `point` to `another`, returning an integer indicating whether the point was before, at or after the other.
+
+### Check methods
+
+### `Point.isAfter(point: Point, another: Point) => boolean`
+
+Check if a `point` is after `another`.
+
+### `Point.isBefore(point: Point, another: Point) => boolean`
+
+Check if a `point` is before `another`.
+
+### `Point.equals(point: Point, another: Point) => boolean`
+
+Check if a `point` is exactly equal to `another`.
+
+### `Point.isPoint(value: any) => value is Point`
+
+Check if a `value` implements the `Point` interface.
+
+### Transform methods
+
+### `Point.transform(point: Point, op: Operation, options?) => Point | null`
+
+Transform a `point` by an `op`.
+
+Options: `{affinity?: 'forward' | 'backward' | null}`
