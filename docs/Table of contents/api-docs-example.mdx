@@ -5,3 +5,81 @@ docTags:
 createdAt: Thu Jun 11 2026 13:15:20 GMT+0000 (Coordinated Universal Time)
 ---
 
+## API block example
+
+<ApiMethodV2>
+{
+  "name": "Get User",
+  "method": "GET",
+  "url": "https://api.example.com/users/{id}",
+  "description": "Retrieve a user by their unique ID.",
+  "tab": "examples",
+  "examples": {
+    "languages": [
+      {
+        "id": "js-example",
+        "language": "javascript",
+        "code": "const res = await fetch('https://api.example.com/users/usr_abc123', {\n  headers: { 'Authorization': 'Bearer sk_live_xxx' }\n})\nconst user = await res.json()",
+        "customLabel": ""
+      },
+      {
+        "id": "curl-example",
+        "language": "bash",
+        "code": "curl https://api.example.com/users/usr_abc123 \\\n  -H 'Authorization: Bearer sk_live_xxx'",
+        "customLabel": ""
+      }
+    ],
+    "selectedLanguageId": "js-example"
+  },
+  "results": {
+    "languages": [
+      {
+        "id": "res-200",
+        "language": "200",
+        "code": "{\n  \"id\": \"usr_abc123\",\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@example.com\",\n  \"role\": \"admin\"\n}",
+        "customLabel": ""
+      },
+      {
+        "id": "res-404",
+        "language": "404",
+        "code": "{\n  \"error\": \"Not found\",\n  \"message\": \"User does not exist\"\n}",
+        "customLabel": ""
+      }
+    ],
+    "selectedLanguageId": "res-200"
+  },
+  "request": {
+    "pathParameters": [
+      {
+        "name": "id",
+        "kind": "required",
+        "type": "string",
+        "description": "User ID (e.g. usr_abc123)"
+      }
+    ],
+    "queryParameters": [
+      {
+        "name": "include",
+        "kind": "optional",
+        "type": "string",
+        "description": "Comma-separated relations to include"
+      }
+    ],
+    "headerParameters": [
+      {
+        "name": "Authorization",
+        "kind": "required",
+        "type": "string",
+        "description": "Bearer token"
+      }
+    ],
+    "bodyDataParameters": [],
+    "formDataParameters": []
+  },
+  "currentNewParameter": {
+    "label": "Path Parameter",
+    "value": "pathParameters"
+  },
+  "hasTryItOut": false
+}
+</ApiMethodV2>
