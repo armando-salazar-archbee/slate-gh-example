@@ -10,6 +10,10 @@
         "isCategory": true,
         "children": [
           {
+            "path": "Table of contents/api-docs-example.mdx",
+            "children": []
+          },
+          {
             "categoryName": "Introduction",
             "isCategory": false,
             "path": "Introduction.mdx",
