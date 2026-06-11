@@ -1,7 +1,7 @@
 ---
 title: Editor API
 docTags: 
-createdAt: Wed Jun 10 2026 12:20:59 GMT+0000 (Coordinated Universal Time)
+createdAt: Wed Jun 10 2026 12:24:56 GMT+0000 (Coordinated Universal Time)
 ---
 
 The `Editor` object stores all the state of a Slate editor. It can be extended by [plugins](../../concepts/08-plugins.mdx) to add helpers and implement new behaviors. It's a type of `Node` and its path is `[]`.
@@ -253,13 +253,13 @@ Insert a block break at the current selection.
 
 Inserts a fragment *at the current selection*.
 
-If the selection is currently expanded, it will be deleted first. To atomically insert nodes (including at the very beginning or end), use :Link[Transforms.insertNodes]{label="Transforms.insertNodes" overridedLabel="Transforms.insertNodes" spaceId docId="IVORSdNtr--7lBFULlsy_" version="v2" docAnchorId="#transformsinsertnodeseditor-editor-nodes-node--node-options" loadingMethod="dynamic" newTab="false" githubPath="../transforms.md#transformsinsertnodeseditor-editor-nodes-node--node-options" href="../transforms.mdx"}.
+If the selection is currently expanded, it will be deleted first. To atomically insert nodes (including at the very beginning or end), use :Link[Transforms.insertNodes]{label="Transforms.insertNodes" overridedLabel="Transforms.insertNodes" spaceId docId="IVORSdNtr--7lBFULlsy_" version="v2" docAnchorId="#transformsinsertnodeseditor-editor-nodes-node--node-options" loadingMethod="dynamic" newTab="false" githubPath="../transforms.mdx" href="../transforms.mdx"}.
 
 ### `Editor.insertNode(editor: Editor, node: Node) => void`
 
 Inserts a node *at the current selection*.
 
-If the selection is currently expanded, it will be deleted first. To atomically insert a node (including at the very beginning or end), use :Link[Transforms.insertNodes]{label="Transforms.insertNodes" overridedLabel="Transforms.insertNodes" spaceId docId="IVORSdNtr--7lBFULlsy_" version="v2" docAnchorId="#transformsinsertnodeseditor-editor-nodes-node--node-options" loadingMethod="dynamic" newTab="false" githubPath="../transforms.md#transformsinsertnodeseditor-editor-nodes-node--node-options" href="../transforms.mdx"}.
+If the selection is currently expanded, it will be deleted first. To atomically insert a node (including at the very beginning or end), use :Link[Transforms.insertNodes]{label="Transforms.insertNodes" overridedLabel="Transforms.insertNodes" spaceId docId="IVORSdNtr--7lBFULlsy_" version="v2" docAnchorId="#transformsinsertnodeseditor-editor-nodes-node--node-options" loadingMethod="dynamic" newTab="false" githubPath="../transforms.mdx" href="../transforms.mdx"}.
 
 ### `Editor.insertText(editor: Editor, text: string) => void`
 
@@ -403,7 +403,7 @@ const withImages = editor => {
 
 ### Element type methods
 
-Use these methods so that Slate can identify certain elements as :Link[inlines]{label="inlines" overridedLabel="inlines" spaceId docId="kO-nsPe9s4u3ZGUMayHfo" version="v2" docAnchorId="#blocks-vs-inlines" loadingMethod="dynamic" newTab="false" githubPath="../../concepts/02-nodes.md#blocks-vs-inlines" href="../../concepts/02-nodes.mdx"} or :Link[voids]{label="voids" overridedLabel="voids" spaceId docId="kO-nsPe9s4u3ZGUMayHfo" version="v2" docAnchorId="#voids" loadingMethod="dynamic" newTab="false" githubPath="../../concepts/02-nodes.md#voids" href="../../concepts/02-nodes.mdx"}.
+Use these methods so that Slate can identify certain elements as :Link[inlines]{label="inlines" overridedLabel="inlines" spaceId docId="kO-nsPe9s4u3ZGUMayHfo" version="v2" docAnchorId="#blocks-vs-inlines" loadingMethod="dynamic" newTab="false" githubPath="../../concepts/02-nodes.mdx" href="../../concepts/02-nodes.mdx"} or :Link[voids]{label="voids" overridedLabel="voids" spaceId docId="kO-nsPe9s4u3ZGUMayHfo" version="v2" docAnchorId="#voids" loadingMethod="dynamic" newTab="false" githubPath="../../concepts/02-nodes.mdx" href="../../concepts/02-nodes.mdx"}.
 
 ### `isInline(element: Element) => boolean`
 

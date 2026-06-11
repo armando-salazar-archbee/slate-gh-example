@@ -318,6 +318,12 @@
             "children": []
           }
         ]
+      },
+      {
+        "categoryName": "Shadow Docs",
+        "isCategory": true,
+        "children": [],
+        "isShadowDocs": true
       }
     ]
   }
