@@ -1,7 +1,7 @@
 ---
 title: Editor
 docTags: 
-createdAt: Thu Jul 09 2026 08:45:38 GMT+0000 (Coordinated Universal Time)
+createdAt: Thu Jul 23 2026 17:18:26 GMT+0000 (Coordinated Universal Time)
 ---
 
 All of the behaviors, content and state of a Slate editor is rolled up into a single, top-level `Editor` object. It has an interface of:
@@ -38,7 +38,7 @@ It is slightly more complex than the others, because it contains all of the top-
 The `children` property contains the document tree of nodes that make up the editor's content.
 
 The `selection` property contains the user's current selection, if any.
-Don't set it directly; use :Link[Transforms.select]{label="Transforms.select" overridedLabel="Transforms.select" spaceId docId="4LAKrG0bCD0FGRihMzLj-" version="v2" docAnchorId="#selection-transforms" loadingMethod="dynamic" newTab="false" href="07-editor.mdx"}
+Don't set it directly; use :Link[Transforms.select]{label="Transforms.select" overridedLabel="Transforms.select" spaceId docId="bFuqMjMcH82inRzmfcgN_" version="v2" docAnchorId="#selection-transforms" loadingMethod="dynamic" newTab="false" href="07-editor.mdx"}
 
 The `operations` property contains all of the operations that have been applied since the last "change" was flushed. (Since Slate batches operations up into ticks of the event loop.)
 
@@ -94,7 +94,7 @@ editor.normalizeNode = entry => {
 Whenever you override behaviors, be sure to call the existing functions as a fallback mechanism for the default behavior. Unless you really do want to completely remove the default behaviors (which is rarely a good idea).
 
 <BlockQuote>
-  🤖 For more info, check out the :Link[Editor Instance Methods to Override API Reference]{label="Editor Instance Methods to Override API Reference" overridedLabel="Editor Instance Methods to Override API Reference" spaceId docId="0nkb9SZ_5cr2_Ch7_Zb0t" version="v2" docAnchorId="#schema-specific-instance-methods-to-override" loadingMethod="dynamic" newTab="false" githubPath="../api/nodes/editor.mdx" href="../api/nodes/editor.mdx"}
+  🤖 For more info, check out the :Link[Editor Instance Methods to Override API Reference]{label="Editor Instance Methods to Override API Reference" overridedLabel="Editor Instance Methods to Override API Reference" spaceId docId="uGGBOJCZ9XN4Dstm9T5v5" version="v2" docAnchorId="#schema-specific-instance-methods-to-override" loadingMethod="dynamic" newTab="false" githubPath="../api/nodes/editor.mdx" href="../api/nodes/editor.mdx"}
 </BlockQuote>
 
 ## Helper Functions
@@ -124,5 +124,5 @@ for (const point of Editor.positions(editor)) {
 ```
 
 <BlockQuote>
-  🤖 For more info, check out the :Link[Editor Static Methods API Reference]{label="Editor Static Methods API Reference" overridedLabel="Editor Static Methods API Reference" spaceId docId="0nkb9SZ_5cr2_Ch7_Zb0t" version="v2" docAnchorId="#static-methods" loadingMethod="dynamic" newTab="false" githubPath="../api/nodes/editor.mdx" href="../api/nodes/editor.mdx"}
+  🤖 For more info, check out the :Link[Editor Static Methods API Reference]{label="Editor Static Methods API Reference" overridedLabel="Editor Static Methods API Reference" spaceId docId="uGGBOJCZ9XN4Dstm9T5v5" version="v2" docAnchorId="#static-methods" loadingMethod="dynamic" newTab="false" githubPath="../api/nodes/editor.mdx" href="../api/nodes/editor.mdx"}
 </BlockQuote>
