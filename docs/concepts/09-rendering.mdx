@@ -12,7 +12,7 @@ You can define these behaviors by passing "render props" to the top-level `<Edit
 
 For example if you wanted to render custom element components, you'd pass in the `renderElement` prop:
 
-```jsx
+```javascript
 import { createEditor } from 'slate'
 import { Slate, Editable, withReact } from 'slate-react'
 
@@ -66,7 +66,7 @@ When text-level formatting is rendered, the characters are grouped into "leaves"
 
 To customize the rendering of each leaf, you use a custom `renderLeaf` prop:
 
-```jsx
+```javascript
 const renderLeaf = useCallback(({ attributes, children, leaf }) => {
   return (
     <span
@@ -119,7 +119,7 @@ That way other components can execute commands, query the editor state, or anyth
 
 A common use case for this is rendering a toolbar with formatting buttons that are highlighted based on the current selection:
 
-```jsx
+```javascript
 const MyEditor = () => {
   const editor = useMemo(() => withReact(createEditor()), [])
   return (
