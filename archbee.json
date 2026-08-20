@@ -10,6 +10,10 @@
         "isCategory": true,
         "children": [
           {
+            "path": "table-of-contents/overview-guide.mdx",
+            "children": []
+          },
+          {
             "categoryName": "Introduction",
             "isCategory": false,
             "path": "Introduction.mdx",
