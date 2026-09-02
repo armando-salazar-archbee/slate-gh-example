@@ -6,17 +6,9 @@
     "assets": ".gitbook/assets",
     "docsTree": [
       {
-        "path": "preview-example.mdx",
-        "children": []
-      },
-      {
         "categoryName": "Table of contents",
         "isCategory": true,
         "children": [
-          {
-            "path": "table-of-contents/overview-guide.mdx",
-            "children": []
-          },
           {
             "categoryName": "Introduction",
             "isCategory": false,
