@@ -326,5 +326,6 @@
         "isShadowDocs": true
       }
     ]
-  }
+  },
+  "autoMerge": false
 }
